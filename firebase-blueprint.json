@@ -1,0 +1,71 @@
+{
+  "entities": {
+    "Candidate": {
+      "title": "Candidate",
+      "description": "Student candidate data",
+      "type": "object",
+      "properties": {
+        "candidate_id": { "type": "string" },
+        "first_name": { "type": "string" },
+        "last_name": { "type": "string" }
+      }
+    },
+    "Exam": {
+      "title": "Exam",
+      "description": "Exam configuration",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "duration_minutes": { "type": "number" }
+      }
+    },
+    "Subject": {
+      "title": "Subject",
+      "description": "Subject definition",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" }
+      }
+    },
+    "Question": {
+      "title": "Question",
+      "description": "Question definition",
+      "type": "object",
+      "properties": {
+        "question_type": { "type": "string" },
+        "question_text": { "type": "string" },
+        "correct_answer": { "type": "string" }
+      }
+    },
+    "ExamResult": {
+      "title": "ExamResult",
+      "description": "Exam result data",
+      "type": "object",
+      "properties": {
+        "candidate_id": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "candidates": {
+      "schema": "Candidate",
+      "description": "Candidates allowed to take the exam"
+    },
+    "exams": {
+      "schema": "Exam",
+      "description": "Configured exams"
+    },
+    "subjects": {
+      "schema": "Subject",
+      "description": "Exam subjects"
+    },
+    "questions": {
+      "schema": "Question",
+      "description": "Question bank"
+    },
+    "exam_results": {
+      "schema": "ExamResult",
+      "description": "Exam results"
+    }
+  }
+}
